@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.conf import settings
 
 # When True ThumbnailNode.render can raise errors
@@ -112,3 +113,7 @@ THUMBNAIL_FILTER_WIDTH = 500
 # Should we flatten images by default (fixes a lot of transparency issues with
 # imagemagick)
 THUMBNAIL_FLATTEN = False
+
+# Whenever we will check an existing thumbnail exists and avoid to overwrite or not.
+# Set this to true if you have an slow .exists() implementation on your storage backend of choice.
+THUMBNAIL_FORCE_OVERWRITE = False
